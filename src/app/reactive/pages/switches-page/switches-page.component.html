@@ -1,0 +1,68 @@
+<h2 class="text-xl font-semibold mb-2">Reactivos: Switches</h2>
+<hr class="mb-4">
+
+<form autocomplete="off" class="space-y-4">
+
+    <!-- Radio -->
+    <div class="grid grid-cols-3 items-center gap-4">
+        <label class="text-gray-700 col-span-1">Género</label>
+        <div class="col-span-2 space-y-2">
+            <div class="flex items-center">
+                <input class="mr-2 text-blue-500 focus:ring focus:ring-blue-500" type="radio" value="M"
+                    id="radioMasculino">
+                <label class="text-gray-700" for="radioMasculino">Masculino</label>
+            </div>
+
+            <div class="flex items-center">
+                <input class="mr-2 text-blue-500 focus:ring focus:ring-blue-500" type="radio" value="F"
+                    id="radioFemenino">
+                <label class="text-gray-700" for="radioFemenino">Femenino</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Switches -->
+    <div class="grid grid-cols-3 items-center gap-4">
+        <label class="text-gray-700 col-span-1">Notificaciones</label>
+        <div class="col-span-2">
+            <div class="flex items-center">
+                <input class="mr-2 h-6 w-6 rounded focus:ring focus:ring-blue-500" type="checkbox"
+                    id="flexSwitchCheckChecked">
+                <label class="text-gray-700" for="flexSwitchCheckChecked">Quiero recibir notificaciones</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Términos y condiciones -->
+    <div class="grid grid-cols-3 items-center gap-4">
+        <div class="col-span-1"></div>
+        <div class="col-span-2">
+            <div class="flex items-center">
+                <input class="mr-2 h-6 w-6 rounded focus:ring focus:ring-blue-500" type="checkbox"
+                    id="flexCheckDefault">
+                <label class="text-gray-700" for="flexCheckDefault">Términos y condiciones de uso</label>
+            </div>
+            <span class="text-sm text-red-500">
+                Debe de aceptar las condiciones de uso
+            </span>
+        </div>
+    </div>
+
+    <!-- Botón submit -->
+    <div class="flex justify-end">
+        <button class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600" type="submit">
+            Guardar
+        </button>
+    </div>
+</form>
+
+<div class="mt-8 space-y-4">
+    <h5 class="font-semibold">Valor del formulario</h5>
+    <pre class="bg-gray-100 p-2 rounded-md">{{ 'object' | json }}</pre>
+
+    <h5 class="font-semibold">Persona</h5>
+    <pre class="bg-gray-100 p-2 rounded-md">{{ 'object' | json }}</pre>
+
+    <h5 class="font-semibold">Valid</h5>
+    <pre class="bg-gray-100 p-2 rounded-md">{{ 'object' | json }}</pre>
+</div>
