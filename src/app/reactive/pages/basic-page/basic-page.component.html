@@ -69,21 +69,27 @@
 <div class="grid grid-cols-1 gap-4 mt-8">
 
     <span class="font-semibold">Valid</span>
-    <pre class="p-2 bg-gray-100 rounded-md">{{ 'objeto' | json }}</pre>
+    <pre class="p-2 bg-gray-100 rounded-md">{{ myForm.valid | json }}</pre>
 
     <span class="font-semibold">Pristine</span>
-    <pre class="p-2 bg-gray-100 rounded-md">{{ 'objeto' | json }}</pre>
+    <pre class="p-2 bg-gray-100 rounded-md">{{ myForm.pristine | json }}</pre>
 
     <span class="font-semibold">Touched</span>
-    <pre class="p-2 bg-gray-100 rounded-md">{{ 'objeto' | json }}</pre>
+    <pre class="p-2 bg-gray-100 rounded-md">{{ myForm.touched | json }}</pre>
 
     <span class="font-semibold">Value</span>
-    <pre class="p-2 bg-gray-100 rounded-md">{{ 'objeto' | json }}</pre>
+    <pre class="p-2 bg-gray-100 rounded-md">{{ myForm.value | json }}</pre>
 
     <span class="font-semibold">Precio</span>
-    <pre class="p-2 bg-gray-100 rounded-md">{{ 'objeto' | json }}</pre>
+    <pre class="p-2 bg-gray-100 rounded-md">{{ myForm.controls[ 'price' ].value | json }}</pre>
+
+    <span class="font-semibold">Precio errores</span>
+    <pre class="p-2 bg-gray-100 rounded-md">{{ myForm.controls[ 'price' ].errors | json }}</pre>
 
     <span class="font-semibold">Producto</span>
-    <pre class="p-2 bg-gray-100 rounded-md">{{ 'objeto' | json }}</pre>
+    <pre class="p-2 bg-gray-100 rounded-md">{{ myForm.controls[ 'name' ].value | json }}</pre>
+
+    <span class="font-semibold">Producto errores</span>
+    <pre class="p-2 bg-gray-100 rounded-md">{{ myForm.controls[ 'name' ].errors | json }}</pre>
 
 </div>
