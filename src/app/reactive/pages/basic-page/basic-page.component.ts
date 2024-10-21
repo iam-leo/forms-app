@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+
+const defaultForm = {
+  name: 'any',
+  price: 10,
+  inStorage: 3
+}
 
 @Component({
   templateUrl: './basic-page.component.html',
   styles: ``
 })
-export class BasicPageComponent {
+
+export class BasicPageComponent implements OnInit{
   /* public myForm: FormGroup = new FormGroup({
     name: new FormControl(''),
     price: new FormControl(0),
@@ -20,9 +27,15 @@ export class BasicPageComponent {
 
   constructor ( private fb: FormBuilder ) { }
 
+  ngOnInit(): void {
+    this.myForm.reset( defaultForm )
+  }
+
   onSave(): void {
     if( this.myForm.invalid ) return
 
     console.log(this.myForm.value);
+
+    this.myForm.reset({ price: 0, inStorage: 0 });
   }
 }
