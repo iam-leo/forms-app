@@ -53,7 +53,9 @@
                     <input
                         [formControlName]="i"
                         class="flex-grow px-3 py-2 border rounded-l-md focus:outline-none focus:ring focus:ring-blue-500">
-                    <button class="px-4 py-2 text-white bg-red-500 rounded-r-md hover:bg-red-600" type="button">
+                    <button
+                        (click)="onDeleteFavorite(i)"
+                        class="px-4 py-2 text-white bg-red-500 rounded-r-md hover:bg-red-600" type="button">
                         Eliminar
                     </button>
                 </div>
