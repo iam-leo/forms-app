@@ -105,10 +105,10 @@
     <pre class="p-2 bg-gray-100 rounded-md">{{ myForm.errors | json }}</pre>
 
     <h5 class="font-semibold">Nombre</h5>
-    <pre class="p-2 bg-gray-100 rounded-md">{{ myForm.controls['name'].value| json }}</pre>
+    <pre class="p-2 bg-gray-100 rounded-md">{{ myForm.controls['name'].errors | json }}</pre>
 
     <h5 class="font-semibold">Email</h5>
-    <pre class="p-2 bg-gray-100 rounded-md">{{ myForm.controls['email'].value | json }}</pre>
+    <pre class="p-2 bg-gray-100 rounded-md">{{ myForm.controls['email'].errors | json }}</pre>
 
     <h5 class="font-semibold">Username</h5>
     <pre class="p-2 bg-gray-100 rounded-md">{{ myForm.controls['username'].errors | json }}</pre>
