@@ -9,15 +9,15 @@
 >
 
     <!-- Nombre -->
-    <div class="grid items-center grid-cols-3 gap-4">
-        <label class="col-span-1 text-gray-700">Nombre</label>
-        <div class="col-span-2">
+    <div class="grid grid-cols-2 place-items-center gap-x-4">
+        <label class="w-full col-span-1 text-right text-gray-700">Nombre</label>
+        <div class="w-full col-span-1">
             <input
                 formControlName="name"
                 class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-500"
                 placeholder="Nombre de la persona">
             <span
-                *ngIf="isValidField('name')"
+                [ngClass]=" isValidField('name') ? 'block' : 'hidden' "
                 class="text-sm text-red-500">
                 {{ getFieldError('name') }}
             </span>
@@ -25,10 +25,10 @@
     </div>
 
     <!-- Agregar Favorito -->
-    <div class="grid items-center grid-cols-3 gap-4">
-        <label class="col-span-1 text-gray-700">Agregar</label>
-        <div class="col-span-2">
-            <div class="flex">
+    <div class="grid grid-cols-2 place-items-center gap-x-4">
+        <label class="w-full col-span-1 text-right text-gray-700">Agregar</label>
+        <div class="w-full col-span-1">
+            <div class="flex items-center justify-center w-full">
                 <input
                     [formControl]="newFavorite"
                     class="flex-grow px-3 py-2 border rounded-l-md focus:outline-none focus:ring focus:ring-blue-500"

@@ -1,7 +1,7 @@
 <h2 class="mb-2 text-xl font-semibold">Reactivos: Básicos</h2>
 <hr class="mb-4">
 
-<div class="grid grid-cols-1 gap-4">
+<div class="grid w-full grid-cols-1 gap-4 place-items-center">
 
     <form
         autocomplete="off"
@@ -20,7 +20,7 @@
                     formControlName="name"
                 >
                 <span
-                    *ngIf="isValidField('name')"
+                    [ngClass]=" isValidField('name') ? 'block' : 'hidden' "
                     class="text-sm text-red-500">
                     <!-- Debe de ser de 3 letras -->
                     {{ getFieldError('name')}}
@@ -37,8 +37,11 @@
                     placeholder="Precio del producto"
                     formControlName="price"
                 >
-                <span *ngIf="isValidField('price')" class="text-sm text-red-500">
-                    El precio debe de ser 0 o mayor
+                <span
+                    [ngClass]=" isValidField('price') ? 'block' : 'hidden' "
+                    class="text-sm text-red-500"
+                >
+                    {{ getFieldError('price')}}
                 </span>
             </div>
         </div>
@@ -52,8 +55,11 @@
                     placeholder="Existencias del producto"
                     formControlName="inStorage"
                 >
-                <span *ngIf="isValidField('inStorage')" class="text-sm text-red-500">
-                    Las existencias deben de ser 0 o mayor
+                <span
+                    [ngClass]=" isValidField('inStorage') ? 'block' : 'hidden' "
+                    class="text-sm text-red-500"
+                >
+                    {{ getFieldError('inStorage')}}
                 </span>
             </div>
         </div>
