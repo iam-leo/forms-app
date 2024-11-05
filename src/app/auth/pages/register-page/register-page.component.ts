@@ -22,7 +22,7 @@ export class RegisterPageComponent {
   ) { }
 
   isValidField( field: string){
-    return this.validatorsService.isValidField(this.myForm, field)
+    return this.validatorsService.isValidField(this.myForm, field);
   }
   onSubmit() {
     this.myForm.markAllAsTouched();
