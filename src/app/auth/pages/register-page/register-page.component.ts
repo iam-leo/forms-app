@@ -16,6 +16,10 @@ export class RegisterPageComponent {
     username: ['', [ Validators.required, this.validatorsService.cantBeStrider] ],
     password: ['', [ Validators.required, Validators.minLength(6) ]],
     confirmPassword: ['', [ Validators.required ] ]
+  }, {
+    validators: [
+      this.validatorsService.isFieldOneEqualFieldTwo('password', 'confirmPassword')
+    ]
   })
 
   constructor(
